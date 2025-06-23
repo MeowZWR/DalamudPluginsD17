@@ -64,19 +64,20 @@ jobs:
         PLOGON_SECRETS_PK: ${{ secrets.PLOGON_SECRETS_PK }}
         PLOGON_SECRETS_PK_PASSWORD: ${{ secrets.PLOGON_SECRETS_PK_PASSWORD }}
         XLWEB_KEY: ${{ secrets.XLWEB_KEY }}
-        # PLOGON_S3_HISTORY_BUCKET: ${{ vars.PLOGON_S3_HISTORY_BUCKET }}
-        # PLOGON_S3_DIFFS_BUCKET: ${{ vars.PLOGON_S3_DIFFS_BUCKET }}
-        # PLOGON_S3_ACCESSKEY: ${{ secrets.PLOGON_S3_ACCESSKEY }}
-        # PLOGON_S3_SECRET: ${{ secrets.PLOGON_S3_SECRET }}
-        # PLOGON_S3_REGION: ${{ secrets.PLOGON_S3_REGION }}
-        # PLOGON_INTERNAL_S3_APIURL: ${{ vars.PLOGON_GLADE_APIURL }}
-        # PLOGON_INTERNAL_S3_WEBURL: ${{ vars.PLOGON_GLADE_WEBURL }}
-        # PLOGON_INTERNAL_S3_REGION: ${{ vars.PLOGON_GLADE_REGION }}
-        # PLOGON_INTERNAL_S3_ACCESSKEY: ${{ secrets.PLOGON_GLADE_ACCESSKEY }}
-        # PLOGON_INTERNAL_S3_SECRET: ${{ secrets.PLOGON_GLADE_SECRET }}
+        PLOGON_S3_HISTORY_BUCKET: ${{ vars.PLOGON_S3_HISTORY_BUCKET }}
+        PLOGON_S3_DIFFS_BUCKET: ${{ vars.PLOGON_S3_DIFFS_BUCKET }}
+        PLOGON_S3_ACCESSKEY: ${{ secrets.PLOGON_S3_ACCESSKEY }}
+        PLOGON_S3_SECRET: ${{ secrets.PLOGON_S3_SECRET }}
+        PLOGON_S3_REGION: ${{ secrets.PLOGON_S3_REGION }}
+        PLOGON_INTERNAL_S3_APIURL: ${{ vars.PLOGON_INTERNAL_S3_APIURL }}
+        PLOGON_INTERNAL_S3_WEBURL: ${{ vars.PLOGON_INTERNAL_S3_WEBURL }}
+        PLOGON_INTERNAL_S3_REGION: ${{ vars.PLOGON_INTERNAL_S3_REGION }}
+        PLOGON_INTERNAL_S3_ACCESSKEY: ${{ secrets.PLOGON_INTERNAL_S3_ACCESSKEY }}
+        PLOGON_INTERNAL_S3_SECRET: ${{ secrets.PLOGON_INTERNAL_S3_SECRET }}
       run: |
         dotnet run -- \
         --manifest-folder="${{ github.workspace }}/manifests" \
+        --master-manifest-folder="${{ github.workspace }}/manifests" \
         --output-folder="${{ github.workspace }}/output" \
         --work-folder="${{ github.workspace }}/work" \
         --static-folder="${{ github.workspace }}/Plogon/Plogon/static" \
