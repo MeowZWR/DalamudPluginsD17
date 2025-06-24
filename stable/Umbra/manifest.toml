@@ -1,7 +1,7 @@
 [plugin]
-repository = "https://github.com/una-xiv/umbra.git"
-commit = "27b878dabba749ffd4195a00cb06fb08421d6dbe"
-owners = ["haroldiedema"]
+repository = "https://github.com/MeowZWR/umbra.git"
+commit = "5769bb880e8c315bf5e5cf5518bdd11331822afc"
+owners = ["haroldiedema", "MeowZWR"]
 project_path = "Umbra"
 changelog = """
 # Umbra 2.3.15
